@@ -1,0 +1,18 @@
+version: '3.8'
+
+services:
+  java-app:
+    image: gradle:7.5.1-jdk17
+    container_name: java-task-manager-container
+    volumes:
+      - ./src:/home/gradle/src
+      - ./build.gradle:/home/gradle/build.gradle
+      - ./json-output:/home/gradle/json-output
+      - ./src/main/resources:/home/gradle/src/main/resources
+      - ./build/libs:/home/gradle/build/libs
+    working_dir: /home/gradle
+    command: gradle build --continuous
+    ports:
+      - "9091:8080"
+    environment:
+      - GRADLE_OPTS=-Dorg.gradle.daemon=false

@@ -1,0 +1,18 @@
+<job-scheduling-data>
+    <schedule>
+        <job>
+            <name>FetchGraphQLData</name>
+            <group>GraphQLJobs</group>
+            <description>Fetch data from GraphQL API</description>
+            <job-class>com.joshbarros.taskmanager.QuartzJob</job-class>
+        </job>
+        <trigger>
+            <cron>
+                <name>HourlyTrigger</name>
+                <group>GraphQLTriggers</group>
+                <job-name>FetchGraphQLData</job-name>
+                <cron-expression>0 0 * * * ?</cron-expression>
+            </cron>
+        </trigger>
+    </schedule>
+</job-scheduling-data>

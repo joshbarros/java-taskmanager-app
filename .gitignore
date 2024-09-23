@@ -1,0 +1,33 @@
+# Ignore Gradle files
+.gradle/
+build/
+bin/
+
+# Ignore IDE configuration files
+.idea/
+.settings/
+.vscode/
+*.iml
+
+# Ignore temporary and backup files
+*.class
+*.log
+*.tmp
+*.bak
+*.swp
+
+# Ignore Docker Compose logs and config
+docker-compose.override.yml
+logs/
+
+# Ignore output JSON and logs
+json-output/events.json
+json-output/logs.txt
+
+# Ignore any generated JAR files
+*.jar
+
+*.class
+
+# Ignore MacOS files
+.DS_Store
